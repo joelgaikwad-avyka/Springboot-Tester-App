@@ -17,7 +17,7 @@ spec:
       containers:
         - name: hello-world
           # Harness replaces this with the artifact chosen at deploy time.
-          image: <+artifacts.primary.image>
+          image: {{.Values.image}}
           ports:
             - containerPort: 8080
           readinessProbe:
